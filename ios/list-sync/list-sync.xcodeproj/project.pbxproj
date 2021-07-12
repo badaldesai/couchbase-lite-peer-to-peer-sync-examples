@@ -36,8 +36,10 @@
 		5F7DB712249AC7C30018229F /* listener-cert-pkey.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 5F7DB710249AC7C30018229F /* listener-cert-pkey.p12 */; };
 		5F7DB713249AC7C30018229F /* listener-pinned-cert.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5F7DB711249AC7C30018229F /* listener-pinned-cert.cer */; };
 		5F8273A72504355000D4C514 /* userallowlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F8273A62504355000D4C514 /* userallowlist.json */; };
-		5F9E7781249E2391003C6EB1 /* CouchbaseLiteSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9E777F249E2380003C6EB1 /* CouchbaseLiteSwift.framework */; };
-		5F9E7782249E2391003C6EB1 /* CouchbaseLiteSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9E777F249E2380003C6EB1 /* CouchbaseLiteSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6854FBA0268F96C00003F6C8 /* CouchbaseLiteSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9E777F249E2380003C6EB1 /* CouchbaseLiteSwift.framework */; };
+		6854FBA1268F96DA0003F6C8 /* CouchbaseLiteSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9E777F249E2380003C6EB1 /* CouchbaseLiteSwift.framework */; };
+		6854FBA6268F983C0003F6C8 /* CouchbaseLiteSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9E777F249E2380003C6EB1 /* CouchbaseLiteSwift.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68A51C782697500B004C2D30 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A51C772697500A004C2D30 /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5F44DED8245CC37700B251F7 /* Embed Frameworks */ = {
+		6854FBA7268F983C0003F6C8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5F9E7782249E2391003C6EB1 /* CouchbaseLiteSwift.framework in Embed Frameworks */,
+				6854FBA6268F983C0003F6C8 /* CouchbaseLiteSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +101,7 @@
 		5F7DB711249AC7C30018229F /* listener-pinned-cert.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "listener-pinned-cert.cer"; sourceTree = "<group>"; };
 		5F8273A62504355000D4C514 /* userallowlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userallowlist.json; sourceTree = "<group>"; };
 		5F9E777F249E2380003C6EB1 /* CouchbaseLiteSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLiteSwift.framework; path = iOS/CouchbaseLiteSwift.framework; sourceTree = SOURCE_ROOT; };
+		68A51C772697500A004C2D30 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F9E7781249E2391003C6EB1 /* CouchbaseLiteSwift.framework in Frameworks */,
+				6854FBA1268F96DA0003F6C8 /* CouchbaseLiteSwift.framework in Frameworks */,
+				6854FBA0268F96C00003F6C8 /* CouchbaseLiteSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +130,7 @@
 				5F44DEA5245C62E500B251F7 /* list-sync */,
 				5F44DEBE245C62E600B251F7 /* list-syncTests */,
 				5F44DEA4245C62E500B251F7 /* Products */,
+				6854FB9F268F96C00003F6C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +176,7 @@
 			children = (
 				5F44DEAA245C62E500B251F7 /* PassiveViewController.swift */,
 				5F44DEAC245C62E500B251F7 /* ActiveViewController.swift */,
+				68A51C772697500A004C2D30 /* EntryViewController.swift */,
 				5F44DECA245C64E100B251F7 /* ListViewController.swift */,
 				5F44DEDF245F573A00B251F7 /* LoginViewController.swift */,
 			);
@@ -240,6 +246,13 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		6854FB9F268F96C00003F6C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,7 +263,7 @@
 				5F44DE9F245C62E500B251F7 /* Sources */,
 				5F44DEA0245C62E500B251F7 /* Frameworks */,
 				5F44DEA1245C62E500B251F7 /* Resources */,
-				5F44DED8245CC37700B251F7 /* Embed Frameworks */,
+				6854FBA7268F983C0003F6C8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,7 +299,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Couchbase Inc.";
 				TargetAttributes = {
 					5F44DEA2245C62E500B251F7 = {
@@ -349,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F44DECB245C64E100B251F7 /* ListViewController.swift in Sources */,
+				68A51C782697500B004C2D30 /* EntryViewController.swift in Sources */,
 				5F44DED3245C80B600B251F7 /* ListRecord.swift in Sources */,
 				5F44DEE2245F580000B251F7 /* Notifications.swift in Sources */,
 				5F44DEDE245F503D00B251F7 /* DictionaryExtensions.swift in Sources */,
@@ -434,6 +448,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -465,6 +480,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -494,6 +510,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -519,6 +536,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
@@ -534,7 +552,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/list-sync/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +576,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/list-sync/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -79,6 +79,16 @@ extension ListViewController {
  
 }
 
+// MARK: IBActions
+extension ListViewController {
+    @IBAction func onAddTapped(_ sender: UIBarButtonItem) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        vc.title = "Add new item"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
 //MARK:UITableViewDataSource
 extension ListViewController {
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -252,8 +262,11 @@ extension ListViewController {
 
        //show right button
        let rightButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: #selector(onDoneTapped(_:)))
+       
+       let leftButton = UIBarButtonItem(title: "Add", style: UIBarButtonItem.Style.plain, target: self, action: #selector(onAddTapped(_:)))
 
        self.tabBarController?.navigationItem.rightBarButtonItem = rightButton
+       self.tabBarController?.navigationItem.leftBarButtonItem = leftButton
    
    }
 }
